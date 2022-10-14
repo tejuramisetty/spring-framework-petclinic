@@ -19,7 +19,6 @@ variables:
 
   # Agent VM image name
   Name: 'MyAgentPool'
-
 stages:
 - stage: Build
   displayName: Build stage
@@ -54,7 +53,8 @@ stages:
     displayName: Deploy Linux Web App
     environment: $(environmentName)
     pool:
-      vmImage: $(vmImageName)
+     Name: 'MyAgentPool'
+   
     strategy:
       runOnce:
         deploy:
