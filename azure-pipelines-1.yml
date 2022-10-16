@@ -54,7 +54,7 @@ stages:
     displayName: Deploy Linux Web App
     environment: $(environmentName)
     pool:
-      name: 'MyAgentPool'
+      name: 'MyAgentPool1'
     strategy:
       runOnce:
         deploy:
